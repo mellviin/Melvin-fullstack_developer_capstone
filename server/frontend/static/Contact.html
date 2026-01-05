@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <script>
+    const logout = async (e) => {
+      sessionStorage.clear();
+      window.location.href = "/";
+    };
+    let checkSession = ()=> {
+      let curr_user = sessionStorage.getItem("username");
+
+      if (curr_user && curr_user !== "") {
+        document.getElementById("loginlogout").innerHTML = 
+        '<span class="homepage_links">' + curr_user + '</span>' +
+        '<a class="homepage_links" onclick="logout()" href="/">Logout</a>';
+      } else {
+        document.getElementById("loginlogout").innerHTML = 
+        '<a class="homepage_links" href="/login">Login</a>' +
+        '<a class="homepage_links" href="/register">Register</a>';
+      }
+    }
+  </script>
+</head>
+<body onload="checkSession()">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+  <div class="container-fluid">
+    <h2 style="padding-right: 5%;">Dealerships</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarText">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" style="font-size: larger;" href="/contact">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <div class="loginlink" id="loginlogout"></div>
+      </span>
+    </div>
+  </div>
+</nav>
+<div class="d-flex justify-content-center mt-5">
+  <div class="card p-4" style="width: 70%; border-radius: 25px;">
+    <div class="text-center mb-4">
+      <img
+        src="https://imgs.search.brave.com/Vh-eN3NIpWygfwtFSTP-eT2_R1Sfm5XAer9g0o9Dpns/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9tb2Rlcm4tY2Fy/LXNob3dyb29tLWZl/YXR1cmluZy12YXJp/b3VzLXZlaGljbGVz/LWxhcmdlLXdpbmRv/d3MtbmF0dXJhbC1s/aWdodF8xMTAzNzMt/MTE2MDguanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw"
+        class="img-fluid rounded"
+        style="max-height:350px;"
+      >
+    </div>
+<div class="d-flex justify-content-center align-items-center mt-4">
+  <div class="text-center" style="width: 30%;">
+    <img
+      src="https://imgs.search.brave.com/AgLlBVOP51i7Vb8p04DsZkmolrsKkUx8HNi6ksHkjhg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9zZXJpb3VzLXBv/cnRyYWl0LW1hbi1j/YWxsLWNlbnRlci1o/ZWFkc2V0LWhlbHAt/Y3VzdG9tZXItc2Vy/dmljZS1hZ2VuY3kt/c2FsZXMtZGVzay10/ZWxlbWFya2V0aW5n/LWNvbW11bmljYXRp/b24tdmlydHVhbC1h/c3Npc3RhbnQtYnVz/aW5lc3NtYW4td2l0/aC1mb2N1cy1zdXBw/b3J0LWhlYWRwaG9u/ZXNfNTkwNDY0LTE4/MzQyMS5qcGc_c2Vt/dD1haXNfaHlicmlk/Jnc9NzQwJnE9ODA"
+      width="260"
+      height="260"
+      alt="Support Icon"
+    >
+  </div>
+  <div style="width: 2px; height: 220px; background-color: #666;"></div>
+  <div class="ms-4 text-primary d-flex flex-column justify-content-center"
+     style="width: 40%; font-size: 14px; line-height: 1.6;">
+    <p class="mb-2">
+      <strong>Contact Customer Service</strong><br>
+      support@bestcars.com
+    </p>
+    <p class="mb-2">
+      <strong>Contact our National Advertising team</strong><br>
+      NationalSales@bestcars.com
+    </p>
+    <p class="mb-2">
+      <strong>Contact our Public Relations team</strong><br>
+      PR@bestcars.com
+    </p>
+    <p class="mb-2">
+      <strong>Contact the bestcars.com offices</strong><br>
+      312-611-1111
+    </p>
+    <p class="mb-0">
+      <strong>Become a bestcars.com car dealer</strong><br>
+      <a href="#">Visit growwithbestcars.com</a>
+    </p>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>
