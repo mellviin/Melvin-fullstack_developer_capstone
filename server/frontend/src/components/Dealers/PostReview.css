@@ -1,0 +1,64 @@
+/* Post Review Layout */
+.post-review-container {
+  width: 420px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* Dealer Title */
+.dealer-title {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: #1f2b6c !important;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+
+/* Review textarea */
+.review-textarea {
+  height: 120px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  margin-bottom: 15px;
+  border: 1px solid #999;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Inputs & dropdown */
+.form-group input,
+.form-group select {
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #999;
+}
+
+/* Post Review Button */
+.postreview-btn {
+  width: 140px;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  border: 1px solid #000;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.postreview-btn:hover {
+  background-color: #e0e0e0;
+}
