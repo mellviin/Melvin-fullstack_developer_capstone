@@ -20,4 +20,6 @@ urlpatterns = [
     path('reviews/dealer/<int:dealer_id>', views.get_dealer_reviews, name='dealer_reviews'),
 
         path(route='add_review', view=views.add_review, name='add_review'),
+        path('get_cars/', views.get_cars, name='get_cars'),
+
 ]
