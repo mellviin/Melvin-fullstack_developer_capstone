@@ -9,7 +9,8 @@ urlpatterns = [
     path('register', views.registration, name='register'),
 
     # Dealers
-    path('get_dealers', views.get_dealerships, name='get_dealers'),
+    path('get_dealers/', views.get_dealerships, name='get_dealers'),
+
     path('get_dealers/<str:state>', views.get_dealerships, name='get_dealers_by_state'),
 
     # Dealer details
